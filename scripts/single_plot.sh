@@ -1,0 +1,1 @@
+python single_plot.py $1
