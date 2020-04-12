@@ -12,6 +12,7 @@ def read_file(country):
 
   return reversed(data)
 
+
 def create_plot(data, country):
   dates = []
   cases = []
@@ -37,6 +38,7 @@ def main():
   COUNTRY = sys.argv[1]
 
   country_data_raw = read_file(COUNTRY)
-  # country_data_prun = prun_data(country_data_raw)
   create_plot(country_data_raw, COUNTRY)
+
+
 main()

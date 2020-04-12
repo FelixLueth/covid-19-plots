@@ -5,4 +5,8 @@ data/*
 !data/.keep
 .vscode
 env/
-plot.py
+
+# Test files
+TEST*.py
+
+
