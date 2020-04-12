@@ -30,6 +30,7 @@ def create_plot(data, country):
   plt.tick_params(axis='x', rotation=-90)
 
   plt.savefig('output/daily_cases_' + country + '.png')
+  plt.show()
 
 
 def main():
@@ -38,5 +39,4 @@ def main():
   country_data_raw = read_file(COUNTRY)
   # country_data_prun = prun_data(country_data_raw)
   create_plot(country_data_raw, COUNTRY)
-  plt.show()
 main()
