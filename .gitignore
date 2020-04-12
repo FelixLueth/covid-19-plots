@@ -1,0 +1,8 @@
+.DS_Store
+output/*
+!output/.keep
+data/*
+!data/.keep
+.vscode
+env/
+plot.py
