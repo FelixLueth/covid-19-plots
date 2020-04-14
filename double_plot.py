@@ -23,15 +23,16 @@ def get_data(country, index):
 def create_plot(dataset_one, dataset_two, dates, country_one, country_two):
   days = [x for x in range(0, len(dates))]
   plt.figure(figsize=(20, 10), dpi=150)
-  plt.plot(days, dataset_one, days, dataset_two)
-  # plt.plot(tuple(dates), dataset_two)
+  plt.plot(days, dataset_one, label=country_one)
+  plt.plot(days, dataset_two, label=country_two) 
   plt.title('Daily Cases  ' + country_one + ' and ' + country_two )
   plt.xlabel('Date')
   plt.ylabel('Cases')
+  plt.legend()
   plt.tick_params(axis='x', rotation=-90)
 
   plt.savefig('output/dailey_cases_' + country_one + '_' + country_two + '.png')
-  plt.show()
+  # plt.show()
 
 
 def main():
@@ -40,9 +41,6 @@ def main():
 
   dataset_one = list(map(int, get_data(COUNTRY_ONE, 4)))
   dataset_two = list(map(int, get_data(COUNTRY_TWO, 4)))
-
-  print(len(dataset_one))
-  print(len(dataset_two))
 
   dates = list(map(str,get_data(COUNTRY_ONE, 0)))
 

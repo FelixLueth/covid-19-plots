@@ -9,4 +9,6 @@ env/
 # Test files
 TEST*.py
 
+# files
+scripts/multiple_plots.sh
 
