@@ -24,7 +24,7 @@ mv csv data/data_all.csv
 ```bash
 python src/single_plot.py USA 
 ```
-![single_plot](doc/img/Daily_cases_USA.png)
+![single_plot](doc/img/daily_cases_USA.png)
 
 ### Double Plot example
 ```bash
