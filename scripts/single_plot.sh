@@ -1,1 +1,1 @@
-python single_plot.py $1
+python src/single_plot.py $1
