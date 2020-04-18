@@ -16,18 +16,24 @@ def read_file(country):
 def create_plot(data, country):
   dates = []
   cases = []
+  deaths = []
   for entry in data:
     dates.append(entry[0])
     cases.append(entry[4])
+    deaths.append(entry[5])
 
   # Change cases from string to integer
   cases = list(map(int, cases))
+  deaths = list(map(int, deaths))
 
   plt.figure(figsize=(20, 10), dpi=150)
-  plt.plot(tuple(dates), cases)
+  plt.plot(tuple(dates), cases, label='cases')
+  plt.plot(tuple(dates), deaths, label='deaths')
   plt.title('Dailey Cases '+ country)
   plt.xlabel('Date')
   plt.ylabel('Cases')
+  plt.legend()
+  plt.yscale('linear')
   plt.tick_params(axis='x', rotation=-90)
 
   plt.savefig('output/daily_cases_' + country + '.png')
