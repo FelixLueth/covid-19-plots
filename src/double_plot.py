@@ -32,14 +32,13 @@ def create_plot(dataset_one, dataset_two, dates, country_one, country_two):
   plt.legend()
   plt.tick_params(axis='x', rotation=-90)
 
-  plt.savefig('output/dailey_cases_' + country_one + '_' + country_two + '.png')
-  plt.show()
+  plt.savefig('output/daily_cases_' + country_one + '_' + country_two + '.png')
+  # plt.show()
 
 
 def main():
   COUNTRY_ONE = sys.argv[1]
   COUNTRY_TWO = sys.argv[2]
-  DEATHS = sys.argv[3]
 
   dataset_one = list(map(int, get_data(COUNTRY_ONE, 4)))
   dataset_two = list(map(int, get_data(COUNTRY_TWO, 4)))
