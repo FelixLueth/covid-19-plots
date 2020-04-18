@@ -39,6 +39,7 @@ def create_plot(dataset_one, dataset_two, dates, country_one, country_two):
 def main():
   COUNTRY_ONE = sys.argv[1]
   COUNTRY_TWO = sys.argv[2]
+  DEATHS = sys.argv[3]
 
   dataset_one = list(map(int, get_data(COUNTRY_ONE, 4)))
   dataset_two = list(map(int, get_data(COUNTRY_TWO, 4)))
