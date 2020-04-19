@@ -12,6 +12,7 @@ This script works with python 3.7.4. `wget` needs to be installed for Windows an
 ### Cloning and installation
 ```bash
 git clone git@github.com:FelixLueth/covid-19-plots.git
+cd covid-19-plots
 pip install -r requirements.txt
 ```
 
