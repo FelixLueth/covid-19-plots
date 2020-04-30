@@ -11,4 +11,5 @@ TEST*.py
 
 # files
 scripts/multiple_plots.sh
+scripts/new_data.sh
 
